@@ -6,6 +6,9 @@ def fin(mat):
     m=len(mat)
     n=len(mat[0])
     while i<m and j<n:
+        if i==m-1 and j==n-1:
+            Q.append(mat[i][j])
+            break
         if i==0 and R==-1 and j!=n-1:
             Q.append(mat[i][j])
             j+=1
