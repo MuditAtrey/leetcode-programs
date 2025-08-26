@@ -1,13 +1,27 @@
-def areaOfMaxDiagonal(dimensions)
-    if sqrt((dimensions[0][0]**2)+(dimensions[0][1]**2))>sqrt((dimensions[0][0]**2)+(dimensions[0][1]**2)):
-        return dimensions[0][0]*dimensions[0][1]
-    else:
-        return dimensions[1][0]*dimensions[1][1]
-    x=0
-    y=0
-    for i in range(len(dimensions)):
-        if sqrt((dimensions[i][0]**2)+(dimensions[i][1]))>x:
-            x=sqrt((dimensions[i][0]**2)+(dimensions[i][1]))
-            y=i
-    return dimensions[y][0]*dimensions[y][1]
-print areaOfMaxDiagonal([[4,10],[4,9],[9,3],[10,8]])
+class Solution:
+    def areaOfMaxDiagonal(self, dimensions: List[List[int]]) -> int:
+        x=0
+        y=0
+        print(len(dimensions))
+        for i in range(0,len(dimensions)):
+            if sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2))>=x:
+                if x<sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2)):
+                    x=sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2))
+                    y=i
+                    continue
+                
+                if x==sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2)):
+                    print(i)
+                    if dimensions[y][0]*dimensions[y][1]<dimensions[i][0]*dimensions[i][1]:
+                        x=sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2))
+                        print(i)
+                        continue
+
+                    else:
+                        continue
+                
+
+        
+        return dimensions[y][0]*dimensions[y][1]
+
+        
