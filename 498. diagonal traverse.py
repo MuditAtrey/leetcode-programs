@@ -39,9 +39,7 @@ def fin(mat):
             i-=1
             j+=1
 
-        if i==m-1 and j==n-1:
-            Q.append(mat[i][j])
-            break
+
 
 
     return Q
