@@ -13,9 +13,11 @@ def areaOfMaxDiagonal(dimensions):
                 continue
 
             if x==sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2)):
-                #print(i)
-                if dimensions[y][0]*dimensions[y][1]<dimensions[i][0]*dimensions[i][1]:
+                #print(i,y)
+                if (dimensions[y][0]*dimensions[y][1])<(dimensions[i][0]*dimensions[i][1]):
+                    #print(i)
                     x=sqrt((dimensions[i][0]**2)+(dimensions[i][1]**2))
+                    y=i
                     #print(i)
                     continue
 
