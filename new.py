@@ -40,9 +40,9 @@ def strongPass(password):
         add+=1
         pass
     if len(password)<6:
-        add=len(password)-6 #A1234
+        six=len(password)-6 #A1234
     if len(password)>20:
-        sub=20-len(password)
+        twenty=20-len(password)
 
 
     if changes>0 and tripn>0:
